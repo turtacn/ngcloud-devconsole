@@ -19,7 +19,15 @@ spec:
   - key: dev
   - key: staging
   - key: production
-  repository: bucketrepo
+  ingress:
+    domain: "sangfor.local"
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: "tuxudong@sangfor.local"
+      enabled: false
+      production: false
+    repository: bucketrepo
   secretStorage: local
   vault: {}
   webhook: lighthouse
